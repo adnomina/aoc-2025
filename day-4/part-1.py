@@ -4,19 +4,19 @@ import sys
 def get_scroll_count(grid, row, col):
     scrolls = 0
 
-    for yy in range(row - 1, row + 2):
-        if yy < 0 or yy > len(grid) - 1:
+    for y in range(row - 1, row + 2):
+        if y < 0 or y > len(grid) - 1:
             continue
 
-        for xx in range(col - 1, col + 2):
-            if xx < 0 or xx > len(grid[row]) - 1:
+        for x in range(col - 1, col + 2):
+            if x < 0 or x > len(grid[row]) - 1:
                 continue
 
-            if xx == col and yy == row:
+            if x == col and y == row:
                 continue
 
 
-            if grid[yy][xx] == "@":
+            if grid[y][x] == "@":
                 scrolls += 1
 
     return scrolls
