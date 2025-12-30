@@ -9,7 +9,7 @@ import { open } from "node:fs/promises";
 		if (/\d{1,4}/g.test(line)) {
 			numbers.push(line.match(/\d{1,4}/g));
 		} else {
-			operators.push(...line.match(/[+,-,*,/]/g));
+			operators.push(...line.match(/[\+\-\*\/]/g));
 		}
 	}
 
